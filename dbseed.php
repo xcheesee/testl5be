@@ -39,6 +39,13 @@ $statement = <<<EOS
         requested_at DATETIME NOT NULL,
         PRIMARY KEY (id)
     ) ENGINE=INNODB;
+
+    CREATE TABLE IF NOT EXISTS comments (
+        id INT NOT NULL AUTO_INCREMENT,
+        comment VARCHAR(100) NOT NULL,
+        film_id INT NULL,
+        PRIMARY KEY (id)
+    ) ENGINE=INNODB;
 EOS;
 
 try {

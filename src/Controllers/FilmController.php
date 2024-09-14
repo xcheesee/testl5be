@@ -16,6 +16,7 @@ class FilmController {
 
     public function processRequest()
     {
+        $response = null;
         switch ($this->requestMethod) {
             case 'GET':
                 if ($this->filmId) {
@@ -29,7 +30,6 @@ class FilmController {
                 };
                 break;
         }
-        //header($response['status_code_header']);
         return $response;
     }
 }
